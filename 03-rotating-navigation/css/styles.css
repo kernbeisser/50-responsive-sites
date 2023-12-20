@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #333333;
+  color: #222222;
+  margin: 0;
+  /* overflow-x: hidden; */
+}
+
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 0.7s linear;
+  width: 90vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+nav {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  /* z-index: -1; */
+  visibility: hidden;
+  transform: 4s ease-in;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 30px 0;
+}
+
+/* da gibt es wohl eine bessere lösung ... */
+nav ul li + li {
+  margin-left: 15px;
+}
+nav ul li + li + li {
+  margin-left: 30px;
+}
+nav ul li + li + li + li {
+  margin-left: 45px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content img {
+  display: block;
+  max-width: 100%;
+  margin: 30px auto;
+  box-shadow: 5px 5px 7px rgba(100, 100, 100, 0.5);
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: #ff7979;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
