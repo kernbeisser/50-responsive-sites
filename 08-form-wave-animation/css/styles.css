@@ -2,12 +2,7 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 body {
-  height: 100vh;
   background-color: steelblue;
   color: white;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -15,6 +10,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   overflow: hidden;
   margin: 0;
 }
@@ -25,11 +21,21 @@ body {
   border-radius: 5px;
 }
 
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: lightblue;
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
   width: 100%;
-  background-color: lightblue;
+  background: lightblue;
   padding: 15px;
   font-family: inherit;
   font-size: 16px;
@@ -47,17 +53,7 @@ body {
 
 .text {
   margin-top: 30px;
-  font-size: 1.3rem;
-}
-
-.container h1 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.container a {
-  text-decoration: none;
-  color: lightblue;
+  /* font-size: 1.3rem; */
 }
 
 .form-control {
@@ -68,13 +64,13 @@ body {
 
 .form-control input {
   background-color: transparent;
-  color: white;
-  border: none;
-  border-bottom: 1px solid white;
+  border: 0;
+  border-bottom: 2px solid white;
   width: 100%;
   display: block;
   padding: 15px 0;
   font-size: 18px;
+  color: white;
 }
 
 .form-control input:focus,
@@ -93,7 +89,7 @@ body {
 .form-control label span {
   display: inline-block;
   font-size: 18px;
-  max-width: 5px;
+  min-width: 5px;
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   /* transition: 0.3s ease-in-out; */
 }
